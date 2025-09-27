@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Shoppe - Premium Home Furnishing</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#8B4513", secondary: "#D2B48C" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <style>
+      :where([class^="ri-"])::before {
+      content: "\f3c2";
+      }
+      .hero-slider {
+      position: relative;
+      overflow: hidden;
+      }
+      .hero-slide {
+      display: none;
+      position: relative;
+      }
+      .hero-slide.active {
+      display: block;
+      }
+      .hero-overlay {
+      background: linear-gradient(135deg, rgba(139, 69, 19, 0.8) 0%, rgba(139, 69, 19, 0.4) 50%, transparent 100%);
+      }
+      .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 1000;
+      }
+      .modal.active {
+      display: flex;
+      }
+      .owl-carousel .owl-item img {
+      width: 100%;
+      height: 20rem;
+      object-fit: cover;
+      object-position: center;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="text-2xl font-['Pacifico'] text-primary">HomeLux</div>
+          <nav class="hidden lg:flex items-center space-x-8">
+            <a
+              href="#"
+              class="text-gray-700 hover:text-primary transition-colors duration-300"
+              >Furniture Reviews</a
+            >
+            <a
+              href="#"
+              class="text-gray-700 hover:text-primary transition-colors duration-300"
+              >Bed & Mattress</a
+            >
+            <a
+              href="#"
+              class="text-gray-700 hover:text-primary transition-colors duration-300"
+              >Couch</a
+            >
+            <a
+              href="#"
+              class="text-gray-700 hover:text-primary transition-colors duration-300"
+              >Home Appliances</a
+            >
+            <a
+              href="#"
+              class="text-gray-700 hover:text-primary transition-colors duration-300"
+              >Home Improvement</a
+            >
+            <a
+              href="#"
+              class="text-gray-700 hover:text-primary transition-colors duration-300"
+              >Art & Decor</a
+            >
+            <a
+              href="https://readdy.ai/home/2eee0d28-14fe-4469-b30f-35808d00b4a3/47061adc-ba23-4626-af9a-b96e61945b42"
+              data-readdy="true"
+              class="text-gray-700 hover:text-primary transition-colors duration-300"
+              >View All Reviews</a
+            >
+          </nav>
+          <button class="lg:hidden w-8 h-8 flex items-center justify-center">
+            <i class="ri-menu-line ri-lg"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+    <section class="hero-slider relative h-screen">
+      <div
+        class="hero-slide active"
+        style="background-image: url('https://readdy.ai/api/search-image?query=Luxurious%20modern%20living%20room%20with%20elegant%20furniture%2C%20premium%20sofa%2C%20coffee%20table%2C%20warm%20lighting%2C%20sophisticated%20interior%20design%2C%20neutral%20color%20palette%2C%20high-end%20home%20decor%2C%20spacious%20layout%2C%20contemporary%20style%2C%20natural%20materials%2C%20cozy%20atmosphere%2C%20professional%20photography&width=1920&height=1080&seq=hero1&orientation=landscape'); background-size: cover; background-position: center;"
+      >
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="relative z-10 h-full flex items-center">
+          <div class="container mx-auto px-6">
+            <div class="max-w-2xl">
+              <h1 class="text-5xl font-bold text-white mb-6">
+                Premium Sectional Sofa Collection
+              </h1>
+              <p class="text-xl text-white mb-8">
+                Experience ultimate comfort with our top-rated luxury sectional
+                sofas, featuring premium materials and exceptional
+                craftsmanship.
+              </p>
+              <div class="flex items-center mb-8">
+                <div class="flex text-yellow-400 mr-4">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                </div>
+                <span class="text-white">4.9/5 (2,847 reviews)</span>
+              </div>
+              <div class="flex space-x-4">
+                <a
+                  href="https://readdy.ai/home/2eee0d28-14fe-4469-b30f-35808d00b4a3/a6d2ebc6-40f8-4f4b-b3a8-4d8d6b955fae"
+                  data-readdy="true"
+                  class="bg-primary text-white px-8 py-4 !rounded-button hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap text-center"
+                  >View Detailed Review</a
+                >
+                <button
+                  class="bg-yellow-500 text-black px-8 py-4 !rounded-button hover:bg-yellow-400 transition-all duration-300 whitespace-nowrap"
+                >
+                  Buy on Amazon
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="hero-slide"
+        style="height:100%;background-image: url('https://readdy.ai/api/search-image?query=Elegant%20bedroom%20with%20premium%20mattress%2C%20luxury%20bedding%2C%20modern%20bed%20frame%2C%20soft%20lighting%2C%20comfortable%20pillows%2C%20high-quality%20linens%2C%20sophisticated%20bedroom%20design%2C%20neutral%20tones%2C%20peaceful%20atmosphere%2C%20hotel-like%20comfort%2C%20premium%20sleep%20experience&width=1920&height=1080&seq=hero2&orientation=landscape'); background-size: cover; background-position: center;"
+      >
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="relative z-10 h-full flex items-center">
+          <div class="container mx-auto px-6">
+            <div class="max-w-2xl">
+              <h1 class="text-5xl font-bold text-white mb-6">
+                Luxury Memory Foam Mattress
+              </h1>
+              <p class="text-xl text-white mb-8">
+                Transform your sleep experience with our award-winning memory
+                foam mattress, designed for optimal comfort and support.
+              </p>
+              <div class="flex items-center mb-8">
+                <div class="flex text-yellow-400 mr-4">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                </div>
+                <span class="text-white">4.8/5 (1,923 reviews)</span>
+              </div>
+              <div class="flex space-x-4">
+                <a
+                  href="https://readdy.ai/home/2eee0d28-14fe-4469-b30f-35808d00b4a3/a6d2ebc6-40f8-4f4b-b3a8-4d8d6b955fae"
+                  data-readdy="true"
+                  class="bg-primary text-white px-8 py-4 !rounded-button hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap text-center"
+                  >View Detailed Review</a
+                >
+                <button
+                  class="bg-yellow-500 text-black px-8 py-4 !rounded-button hover:bg-yellow-400 transition-all duration-300 whitespace-nowrap"
+                >
+                  Buy on Amazon
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="hero-slide"
+        style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20kitchen%20with%20premium%20appliances%2C%20stainless%20steel%20refrigerator%2C%20elegant%20countertops%2C%20sophisticated%20design%2C%20high-end%20kitchen%20equipment%2C%20contemporary%20style%2C%20clean%20lines%2C%20professional%20grade%20appliances%2C%20luxury%20home%20kitchen&width=1920&height=1080&seq=hero3&orientation=landscape'); background-size: cover; background-position: center;"
+      >
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="relative z-10 h-full flex items-center">
+          <div class="container mx-auto px-6">
+            <div class="max-w-2xl">
+              <h1 class="text-5xl font-bold text-white mb-6">
+                Professional Kitchen Appliances
+              </h1>
+              <p class="text-xl text-white mb-8">
+                Elevate your culinary experience with our top-rated
+                professional-grade kitchen appliances for the modern home chef.
+              </p>
+              <div class="flex items-center mb-8">
+                <div class="flex text-yellow-400 mr-4">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-half-fill"></i>
+                </div>
+                <span class="text-white">4.7/5 (3,156 reviews)</span>
+              </div>
+              <div class="flex space-x-4">
+                <a
+                  href="https://readdy.ai/home/2eee0d28-14fe-4469-b30f-35808d00b4a3/a6d2ebc6-40f8-4f4b-b3a8-4d8d6b955fae"
+                  data-readdy="true"
+                  class="bg-primary text-white px-8 py-4 !rounded-button hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap text-center"
+                  >View Detailed Review</a
+                >
+                <button
+                  class="bg-yellow-500 text-black px-8 py-4 !rounded-button hover:bg-yellow-400 transition-all duration-300 whitespace-nowrap"
+                >
+                  Buy on Amazon
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3"
+      >
+        <button
+          class="slider-dot w-3 h-3 rounded-full bg-white bg-opacity-50 active"
+          data-slide="0"
+        ></button>
+        <button
+          class="slider-dot w-3 h-3 rounded-full bg-white bg-opacity-50"
+          data-slide="1"
+        ></button>
+        <button
+          class="slider-dot w-3 h-3 rounded-full bg-white bg-opacity-50"
+          data-slide="2"
+        ></button>
+      </div>
+    </section>
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-800 mb-4">
+            Shop by Category
+          </h2>
+          <p class="text-xl text-gray-600">
+            Discover expert reviews for every room in your home
+          </p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          <div
+            class="category-card bg-gray-50 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300 cursor-pointer"
+          >
+            <div
+              class="w-16 h-16 mx-auto mb-4 flex items-center justify-center"
+            >
+              <i class="ri-sofa-line ri-2x text-primary"></i>
+            </div>
+            <h3 class="font-semibold text-gray-800 mb-2">Furniture</h3>
+            <p class="text-sm text-gray-600">847 Reviews</p>
+          </div>
+          <div
+            class="category-card bg-gray-50 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300 cursor-pointer"
+          >
+            <div
+              class="w-16 h-16 mx-auto mb-4 flex items-center justify-center"
+            >
+              <i class="ri-hotel-bed-line ri-2x text-primary"></i>
+            </div>
+            <h3 class="font-semibold text-gray-800 mb-2">Bed & Mattress</h3>
+            <p class="text-sm text-gray-600">523 Reviews</p>
+          </div>
+          <div
+            class="category-card bg-gray-50 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300 cursor-pointer"
+          >
+            <div
+              class="w-16 h-16 mx-auto mb-4 flex items-center justify-center"
+            >
+              <i class="ri-armchair-line ri-2x text-primary"></i>
+            </div>
+            <h3 class="font-semibold text-gray-800 mb-2">Couch</h3>
+            <p class="text-sm text-gray-600">392 Reviews</p>
+          </div>
+          <div
+            class="category-card bg-gray-50 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300 cursor-pointer"
+          >
+            <div
+              class="w-16 h-16 mx-auto mb-4 flex items-center justify-center"
+            >
+              <i class="ri-fridge-line ri-2x text-primary"></i>
+            </div>
+            <h3 class="font-semibold text-gray-800 mb-2">Appliances</h3>
+            <p class="text-sm text-gray-600">674 Reviews</p>
+          </div>
+          <div
+            class="category-card bg-gray-50 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300 cursor-pointer"
+          >
+            <div
+              class="w-16 h-16 mx-auto mb-4 flex items-center justify-center"
+            >
+              <i class="ri-hammer-line ri-2x text-primary"></i>
+            </div>
+            <h3 class="font-semibold text-gray-800 mb-2">Improvement</h3>
+            <p class="text-sm text-gray-600">298 Reviews</p>
+          </div>
+          <div
+            class="category-card bg-gray-50 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300 cursor-pointer"
+          >
+            <div
+              class="w-16 h-16 mx-auto mb-4 flex items-center justify-center"
+            >
+              <i class="ri-palette-line ri-2x text-primary"></i>
+            </div>
+            <h3 class="font-semibold text-gray-800 mb-2">Art & Decor</h3>
+            <p class="text-sm text-gray-600">456 Reviews</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-800 mb-4">
+            Popular Products
+          </h2>
+          <p class="text-xl text-gray-600">
+            Most reviewed and highly rated home furnishing items
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <div
+            class="product-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            <div class="relative">
+              <img
+                src="https://readdy.ai/api/search-image?query=Premium%20leather%20recliner%20chair%2C%20brown%20leather%20upholstery%2C%20modern%20design%2C%20comfortable%20seating%2C%20luxury%20furniture%2C%20elegant%20home%20decor%2C%20sophisticated%20style%2C%20high-quality%20craftsmanship%2C%20living%20room%20furniture&width=400&height=300&seq=product1&orientation=landscape"
+                alt="Premium Leather Recliner"
+                class="w-full h-48 object-cover object-top cursor-pointer product-image"
+                data-product="1"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="font-semibold text-gray-800 mb-2">
+                Premium Leather Recliner
+              </h3>
+              <p class="text-gray-600 text-sm mb-3">
+                Ultimate comfort with genuine leather upholstery
+              </p>
+              <div class="flex items-center mb-3">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                </div>
+                <span class="text-sm text-gray-600">4.9 (234)</span>
+              </div>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-secondary bg-opacity-20 text-primary text-xs px-2 py-1 rounded-full"
+                  >Furniture</span
+                >
+                <span
+                  class="bg-secondary bg-opacity-20 text-primary text-xs px-2 py-1 rounded-full"
+                  >Leather</span
+                >
+              </div>
+              <div class="flex space-x-2">
+                <a
+                  href="https://readdy.ai/home/2eee0d28-14fe-4469-b30f-35808d00b4a3/a6d2ebc6-40f8-4f4b-b3a8-4d8d6b955fae"
+                  data-readdy="true"
+                  class="flex-1 bg-primary text-white py-2 px-3 !rounded-button text-sm hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap text-center"
+                  >View Review</a
+                >
+                <button
+                  class="flex-1 bg-yellow-500 text-black py-2 px-3 !rounded-button text-sm hover:bg-yellow-400 transition-all duration-300 whitespace-nowrap"
+                >
+                  Amazon
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="product-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            <div class="relative">
+              <img
+                src="https://readdy.ai/api/search-image?query=Modern%20dining%20table%20set%2C%20wooden%20dining%20table%2C%20contemporary%20chairs%2C%20elegant%20dining%20room%20furniture%2C%20natural%20wood%20finish%2C%20minimalist%20design%2C%20family%20dining%20set%2C%20sophisticated%20home%20decor&width=400&height=300&seq=product2&orientation=landscape"
+                alt="Modern Dining Set"
+                class="w-full h-48 object-cover object-top cursor-pointer product-image"
+                data-product="2"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="font-semibold text-gray-800 mb-2">
+                Modern Dining Set
+              </h3>
+              <p class="text-gray-600 text-sm mb-3">
+                Elegant 6-piece dining set with natural wood finish
+              </p>
+              <div class="flex items-center mb-3">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-half-fill text-xs"></i>
+                </div>
+                <span class="text-sm text-gray-600">4.7 (189)</span>
+              </div>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-secondary bg-opacity-20 text-primary text-xs px-2 py-1 rounded-full"
+                  >Furniture</span
+                >
+                <span
+                  class="bg-secondary bg-opacity-20 text-primary text-xs px-2 py-1 rounded-full"
+                  >Dining</span
+                >
+              </div>
+              <div class="flex space-x-2">
+                <a
+                  href="https://readdy.ai/home/2eee0d28-14fe-4469-b30f-35808d00b4a3/a6d2ebc6-40f8-4f4b-b3a8-4d8d6b955fae"
+                  data-readdy="true"
+                  class="flex-1 bg-primary text-white py-2 px-3 !rounded-button text-sm hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap text-center"
+                  >View Review</a
+                >
+                <button
+                  class="flex-1 bg-yellow-500 text-black py-2 px-3 !rounded-button text-sm hover:bg-yellow-400 transition-all duration-300 whitespace-nowrap"
+                >
+                  Amazon
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="product-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            <div class="relative">
+              <img
+                src="https://readdy.ai/api/search-image?query=Smart%20home%20security%20camera%20system%2C%20modern%20surveillance%20equipment%2C%20wireless%20camera%2C%20home%20protection%20device%2C%20sleek%20design%2C%20advanced%20technology%2C%20indoor%20security%20camera%2C%20contemporary%20home%20safety&width=400&height=300&seq=product3&orientation=landscape"
+                alt="Smart Security System"
+                class="w-full h-48 object-cover object-top cursor-pointer product-image"
+                data-product="3"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="font-semibold text-gray-800 mb-2">
+                Smart Security System
+              </h3>
+              <p class="text-gray-600 text-sm mb-3">
+                Advanced wireless security with mobile app control
+              </p>
+              <div class="flex items-center mb-3">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                </div>
+                <span class="text-sm text-gray-600">4.8 (312)</span>
+              </div>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-secondary bg-opacity-20 text-primary text-xs px-2 py-1 rounded-full"
+                  >Security</span
+                >
+                <span
+                  class="bg-secondary bg-opacity-20 text-primary text-xs px-2 py-1 rounded-full"
+                  >Smart Home</span
+                >
+              </div>
+              <div class="flex space-x-2">
+                <a
+                  href="https://readdy.ai/home/2eee0d28-14fe-4469-b30f-35808d00b4a3/a6d2ebc6-40f8-4f4b-b3a8-4d8d6b955fae"
+                  data-readdy="true"
+                  class="flex-1 bg-primary text-white py-2 px-3 !rounded-button text-sm hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap text-center"
+                  >View Review</a
+                >
+                <button
+                  class="flex-1 bg-yellow-500 text-black py-2 px-3 !rounded-button text-sm hover:bg-yellow-400 transition-all duration-300 whitespace-nowrap"
+                >
+                  Amazon
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="product-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            <div class="relative">
+              <img
+                src="https://readdy.ai/api/search-image?query=Luxury%20bedding%20set%2C%20premium%20cotton%20sheets%2C%20elegant%20pillows%2C%20comfortable%20bed%20linens%2C%20hotel%20quality%20bedding%2C%20soft%20fabric%2C%20sophisticated%20bedroom%20decor%2C%20high%20thread%20count%20sheets&width=400&height=300&seq=product4&orientation=landscape"
+                alt="Luxury Bedding Set"
+                class="w-full h-48 object-cover object-top cursor-pointer product-image"
+                data-product="4"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="font-semibold text-gray-800 mb-2">
+                Luxury Bedding Set
+              </h3>
+              <p class="text-gray-600 text-sm mb-3">
+                Premium cotton sheets with 1000 thread count
+              </p>
+              <div class="flex items-center mb-3">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-half-fill text-xs"></i>
+                </div>
+                <span class="text-sm text-gray-600">4.6 (267)</span>
+              </div>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-secondary bg-opacity-20 text-primary text-xs px-2 py-1 rounded-full"
+                  >Bedding</span
+                >
+                <span
+                  class="bg-secondary bg-opacity-20 text-primary text-xs px-2 py-1 rounded-full"
+                  >Cotton</span
+                >
+              </div>
+              <div class="flex space-x-2">
+                <a
+                  href="https://readdy.ai/home/2eee0d28-14fe-4469-b30f-35808d00b4a3/a6d2ebc6-40f8-4f4b-b3a8-4d8d6b955fae"
+                  data-readdy="true"
+                  class="flex-1 bg-primary text-white py-2 px-3 !rounded-button text-sm hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap text-center"
+                  >View Review</a
+                >
+                <button
+                  class="flex-1 bg-yellow-500 text-black py-2 px-3 !rounded-button text-sm hover:bg-yellow-400 transition-all duration-300 whitespace-nowrap"
+                >
+                  Amazon
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div
+            class="product-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            <div class="relative">
+              <img
+                src="https://readdy.ai/api/search-image?query=Modern%20coffee%20table%2C%20glass%20top%20coffee%20table%2C%20contemporary%20living%20room%20furniture%2C%20elegant%20design%2C%20minimalist%20style%2C%20sophisticated%20home%20decor%2C%20functional%20furniture%20piece%2C%20stylish%20center%20table&width=400&height=300&seq=product5&orientation=landscape"
+                alt="Glass Coffee Table"
+                class="w-full h-48 object-cover object-top cursor-pointer product-image"
+                data-product="5"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="font-semibold text-gray-800 mb-2">
+                Glass Coffee Table
+              </h3>
+              <p class="text-gray-600 text-sm mb-3">
+                Modern tempered glass with steel frame design
+              </p>
+              <div class="flex items-center mb-3">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-line text-xs"></i>
+                </div>
+                <span class="text-sm text-gray-600">4.2 (156)</span>
+              </div>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-secondary bg-opacity-20 text-primary text-xs px-2 py-1 rounded-full"
+                  >Furniture</span
+                >
+                <span
+                  class="bg-secondary bg-opacity-20 text-primary text-xs px-2 py-1 rounded-full"
+                  >Glass</span
+                >
+              </div>
+              <div class="flex space-x-2">
+                <a
+                  href="https://readdy.ai/home/2eee0d28-14fe-4469-b30f-35808d00b4a3/a6d2ebc6-40f8-4f4b-b3a8-4d8d6b955fae"
+                  data-readdy="true"
+                  class="flex-1 bg-primary text-white py-2 px-3 !rounded-button text-sm hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap text-center"
+                  >View Review</a
+                >
+                <button
+                  class="flex-1 bg-yellow-500 text-black py-2 px-3 !rounded-button text-sm hover:bg-yellow-400 transition-all duration-300 whitespace-nowrap"
+                >
+                  Amazon
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="product-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            <div class="relative">
+              <img
+                src="https://readdy.ai/api/search-image?query=Ergonomic%20office%20chair%2C%20modern%20desk%20chair%2C%20comfortable%20workspace%20seating%2C%20adjustable%20office%20furniture%2C%20professional%20home%20office%2C%20supportive%20chair%20design%2C%20contemporary%20office%20decor&width=400&height=300&seq=product6&orientation=landscape"
+                alt="Ergonomic Office Chair"
+                class="w-full h-48 object-cover object-top cursor-pointer product-image"
+                data-product="6"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="font-semibold text-gray-800 mb-2">
+                Ergonomic Office Chair
+              </h3>
+              <p class="text-gray-600 text-sm mb-3">
+                Professional grade with lumbar support and adjustability
+              </p>
+              <div class="flex items-center mb-3">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                </div>
+                <span class="text-sm text-gray-600">4.9 (423)</span>
+              </div>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-secondary bg-opacity-20 text-primary text-xs px-2 py-1 rounded-full"
+                  >Office</span
+                >
+                <span
+                  class="bg-secondary bg-opacity-20 text-primary text-xs px-2 py-1 rounded-full"
+                  >Ergonomic</span
+                >
+              </div>
+              <div class="flex space-x-2">
+                <a
+                  href="https://readdy.ai/home/2eee0d28-14fe-4469-b30f-35808d00b4a3/a6d2ebc6-40f8-4f4b-b3a8-4d8d6b955fae"
+                  data-readdy="true"
+                  class="flex-1 bg-primary text-white py-2 px-3 !rounded-button text-sm hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap text-center"
+                  >View Review</a
+                >
+                <button
+                  class="flex-1 bg-yellow-500 text-black py-2 px-3 !rounded-button text-sm hover:bg-yellow-400 transition-all duration-300 whitespace-nowrap"
+                >
+                  Amazon
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="product-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            <div class="relative">
+              <img
+                src="https://readdy.ai/api/search-image?query=Modern%20pendant%20lighting%2C%20elegant%20ceiling%20lights%2C%20contemporary%20light%20fixtures%2C%20stylish%20home%20lighting%2C%20sophisticated%20illumination%2C%20designer%20pendant%20lamps%2C%20ambient%20lighting%20solution&width=400&height=300&seq=product7&orientation=landscape"
+                alt="Modern Pendant Lights"
+                class="w-full h-48 object-cover object-top cursor-pointer product-image"
+                data-product="7"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="font-semibold text-gray-800 mb-2">
+                Modern Pendant Lights
+              </h3>
+              <p class="text-gray-600 text-sm mb-3">
+                Designer ceiling fixtures with adjustable height
+              </p>
+              <div class="flex items-center mb-3">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-half-fill text-xs"></i>
+                </div>
+                <span class="text-sm text-gray-600">4.5 (198)</span>
+              </div>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-secondary bg-opacity-20 text-primary text-xs px-2 py-1 rounded-full"
+                  >Lighting</span
+                >
+                <span
+                  class="bg-secondary bg-opacity-20 text-primary text-xs px-2 py-1 rounded-full"
+                  >Modern</span
+                >
+              </div>
+              <div class="flex space-x-2">
+                <a
+                  href="https://readdy.ai/home/2eee0d28-14fe-4469-b30f-35808d00b4a3/a6d2ebc6-40f8-4f4b-b3a8-4d8d6b955fae"
+                  data-readdy="true"
+                  class="flex-1 bg-primary text-white py-2 px-3 !rounded-button text-sm hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap text-center"
+                  >View Review</a
+                >
+                <button
+                  class="flex-1 bg-yellow-500 text-black py-2 px-3 !rounded-button text-sm hover:bg-yellow-400 transition-all duration-300 whitespace-nowrap"
+                >
+                  Amazon
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="product-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            <div class="relative">
+              <img
+                src="https://readdy.ai/api/search-image?query=Luxury%20area%20rug%2C%20Persian%20style%20carpet%2C%20elegant%20floor%20covering%2C%20sophisticated%20home%20decor%2C%20premium%20textile%2C%20ornate%20pattern%20design%2C%20living%20room%20rug%2C%20high-quality%20materials&width=400&height=300&seq=product8&orientation=landscape"
+                alt="Luxury Area Rug"
+                class="w-full h-48 object-cover object-top cursor-pointer product-image"
+                data-product="8"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="font-semibold text-gray-800 mb-2">Luxury Area Rug</h3>
+              <p class="text-gray-600 text-sm mb-3">
+                Hand-woven Persian style with intricate patterns
+              </p>
+              <div class="flex items-center mb-3">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-line text-xs"></i>
+                </div>
+                <span class="text-sm text-gray-600">4.3 (145)</span>
+              </div>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-secondary bg-opacity-20 text-primary text-xs px-2 py-1 rounded-full"
+                  >Decor</span
+                >
+                <span
+                  class="bg-secondary bg-opacity-20 text-primary text-xs px-2 py-1 rounded-full"
+                  >Rug</span
+                >
+              </div>
+              <div class="flex space-x-2">
+                <a
+                  href="https://readdy.ai/home/2eee0d28-14fe-4469-b30f-35808d00b4a3/a6d2ebc6-40f8-4f4b-b3a8-4d8d6b955fae"
+                  data-readdy="true"
+                  class="flex-1 bg-primary text-white py-2 px-3 !rounded-button text-sm hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap text-center"
+                  >View Review</a
+                >
+                <button
+                  class="flex-1 bg-yellow-500 text-black py-2 px-3 !rounded-button text-sm hover:bg-yellow-400 transition-all duration-300 whitespace-nowrap"
+                >
+                  Amazon
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <button
+            class="bg-primary text-white px-8 py-4 !rounded-button hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap"
+          >
+            View More Products
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-800 mb-4">
+            Featured Products
+          </h2>
+          <p class="text-xl text-gray-600">
+            Editor's choice and premium selections
+          </p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div class="lg:col-span-2">
+            <div
+              class="bg-gradient-to-r from-primary to-secondary rounded-3xl p-8 text-white relative overflow-hidden"
+            >
+              <div class="relative z-10">
+                <h3 class="text-3xl font-bold mb-4">Editor's Choice</h3>
+                <h4 class="text-2xl mb-4">Scandinavian Living Room Set</h4>
+                <p class="text-lg mb-6">
+                  Complete your living space with our award-winning Scandinavian
+                  furniture collection, featuring clean lines and natural
+                  materials.
+                </p>
+                <div class="flex items-center mb-6">
+                  <div class="flex text-yellow-300 mr-4">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                  </div>
+                  <span>5.0/5 (892 reviews)</span>
+                </div>
+                <div class="flex space-x-4">
+                  <a
+                    href="https://readdy.ai/home/2eee0d28-14fe-4469-b30f-35808d00b4a3/a6d2ebc6-40f8-4f4b-b3a8-4d8d6b955fae"
+                    data-readdy="true"
+                    class="bg-white text-primary px-6 py-3 !rounded-button hover:bg-gray-100 transition-all duration-300 whitespace-nowrap text-center"
+                    >View Review</a
+                  >
+                  <button
+                    class="bg-yellow-500 text-black px-6 py-3 !rounded-button hover:bg-yellow-400 transition-all duration-300 whitespace-nowrap"
+                  >
+                    Buy on Amazon
+                  </button>
+                </div>
+              </div>
+              <div class="absolute right-0 top-0 w-1/2 h-full opacity-20">
+                <img
+                  src="https://readdy.ai/api/search-image?query=Scandinavian%20living%20room%20furniture%20set%2C%20minimalist%20design%2C%20natural%20wood%20furniture%2C%20clean%20lines%2C%20modern%20Nordic%20style%2C%20elegant%20simplicity%2C%20contemporary%20home%20decor%2C%20sophisticated%20interior&width=600&height=400&seq=featured1&orientation=landscape"
+                  alt="Featured Product"
+                  class="w-full h-full object-cover object-top"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="space-y-6">
+            <div class="bg-gray-50 rounded-2xl p-6">
+              <img
+                src="https://readdy.ai/api/search-image?query=Premium%20kitchen%20appliance%20set%2C%20stainless%20steel%20appliances%2C%20modern%20kitchen%20equipment%2C%20high-end%20cooking%20appliances%2C%20sophisticated%20kitchen%20design%2C%20professional%20grade%20appliances&width=300&height=200&seq=featured2&orientation=landscape"
+                alt="Kitchen Appliances"
+                class="w-full h-32 object-cover object-top rounded-xl mb-4"
+              />
+              <h4 class="font-semibold text-gray-800 mb-2">
+                Premium Kitchen Suite
+              </h4>
+              <p class="text-gray-600 text-sm mb-3">
+                Professional-grade appliances for the modern chef
+              </p>
+              <div class="flex items-center mb-3">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-half-fill text-xs"></i>
+                </div>
+                <span class="text-sm text-gray-600">4.7 (456)</span>
+              </div>
+              <a
+                href="https://readdy.ai/home/2eee0d28-14fe-4469-b30f-35808d00b4a3/a6d2ebc6-40f8-4f4b-b3a8-4d8d6b955fae"
+                data-readdy="true"
+                class="w-full bg-primary text-white py-2 !rounded-button hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap text-center block"
+                >View Details</a
+              >
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-6">
+              <img
+                src="https://readdy.ai/api/search-image?query=Elegant%20bathroom%20fixtures%2C%20modern%20bathroom%20design%2C%20luxury%20bathroom%20accessories%2C%20contemporary%20vanity%2C%20sophisticated%20bathroom%20decor%2C%20premium%20bathroom%20furniture&width=300&height=200&seq=featured3&orientation=landscape"
+                alt="Bathroom Suite"
+                class="w-full h-32 object-cover object-top rounded-xl mb-4"
+              />
+              <h4 class="font-semibold text-gray-800 mb-2">
+                Luxury Bathroom Suite
+              </h4>
+              <p class="text-gray-600 text-sm mb-3">
+                Transform your bathroom into a spa-like retreat
+              </p>
+              <div class="flex items-center mb-3">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                  <i class="ri-star-fill text-xs"></i>
+                </div>
+                <span class="text-sm text-gray-600">4.8 (234)</span>
+              </div>
+              <a
+                href="https://readdy.ai/home/2eee0d28-14fe-4469-b30f-35808d00b4a3/a6d2ebc6-40f8-4f4b-b3a8-4d8d6b955fae"
+                data-readdy="true"
+                class="w-full bg-primary text-white py-2 !rounded-button hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap text-center block"
+                >View Details</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="modal" id="productModal">
+      <div class="flex items-center justify-center min-h-screen p-4">
+        <div
+          class="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative"
+        >
+          <button
+            class="absolute top-6 right-6 w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-200 transition-colors duration-300 z-10"
+            id="closeModal"
+          >
+            <i class="ri-close-line ri-lg"></i>
+          </button>
+          <div class="p-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div>
+                <div class="owl-carousel owl-theme" id="productGallery">
+                  <div class="item">
+                    <img
+                      src="https://readdy.ai/api/search-image?query=Premium%20leather%20recliner%20chair%2C%20brown%20leather%20upholstery%2C%20modern%20design%2C%20comfortable%20seating%2C%20luxury%20furniture%2C%20elegant%20home%20decor%2C%20sophisticated%20style%2C%20high-quality%20craftsmanship%2C%20living%20room%20furniture&width=500&height=400&seq=modal1&orientation=landscape"
+                      alt="Product Image 1"
+                      class="rounded-xl"
+                    />
+                  </div>
+                  <div class="item">
+                    <img
+                      src="https://readdy.ai/api/search-image?query=Premium%20leather%20recliner%20chair%20detail%20view%2C%20close-up%20of%20leather%20texture%2C%20quality%20stitching%2C%20comfortable%20padding%2C%20luxury%20furniture%20craftsmanship%2C%20elegant%20design%20details&width=500&height=400&seq=modal2&orientation=landscape"
+                      alt="Product Image 2"
+                      class="rounded-xl"
+                    />
+                  </div>
+                  <div class="item">
+                    <img
+                      src="https://readdy.ai/api/search-image?query=Premium%20leather%20recliner%20chair%20in%20living%20room%20setting%2C%20home%20interior%2C%20comfortable%20seating%20arrangement%2C%20luxury%20furniture%20in%20modern%20home%2C%20elegant%20room%20decor&width=500&height=400&seq=modal3&orientation=landscape"
+                      alt="Product Image 3"
+                      class="rounded-xl"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h2
+                  class="text-3xl font-bold text-gray-800 mb-4"
+                  id="modalTitle"
+                >
+                  Premium Leather Recliner
+                </h2>
+                <p class="text-gray-600 mb-6" id="modalDescription">
+                  Experience ultimate comfort with this premium leather recliner
+                  featuring genuine leather upholstery, ergonomic design, and
+                  superior craftsmanship. Perfect for any modern living space.
+                </p>
+                <div class="flex items-center mb-6">
+                  <div class="flex text-yellow-400 mr-4">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                  </div>
+                  <span class="text-gray-600">4.9/5 (234 reviews)</span>
+                </div>
+                <div class="flex flex-wrap gap-2 mb-6">
+                  <span
+                    class="bg-secondary bg-opacity-20 text-primary px-3 py-1 rounded-full"
+                    >Furniture</span
+                  >
+                  <span
+                    class="bg-secondary bg-opacity-20 text-primary px-3 py-1 rounded-full"
+                    >Leather</span
+                  >
+                  <span
+                    class="bg-secondary bg-opacity-20 text-primary px-3 py-1 rounded-full"
+                    >Recliner</span
+                  >
+                </div>
+                <div class="text-3xl font-bold text-primary mb-8">
+                  $1,299.99
+                </div>
+                <div class="flex space-x-4">
+                  <a
+                    href="https://readdy.ai/home/2eee0d28-14fe-4469-b30f-35808d00b4a3/a6d2ebc6-40f8-4f4b-b3a8-4d8d6b955fae"
+                    data-readdy="true"
+                    class="flex-1 bg-primary text-white py-4 px-6 !rounded-button hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap text-center"
+                    >View Detailed Review</a
+                  >
+                  <button
+                    class="flex-1 bg-yellow-500 text-black py-4 px-6 !rounded-button hover:bg-yellow-400 transition-all duration-300 whitespace-nowrap"
+                  >
+                    Buy on Amazon
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-gray-900 text-white py-16">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div>
+            <div class="text-2xl font-['Pacifico'] text-secondary mb-6">
+              Home Shoppe
+            </div>
+            <p class="text-gray-400 mb-6">
+              Your trusted source for honest, detailed reviews of home
+              furnishing products. Making your house a home, one review at a
+              time.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors duration-300"
+              >
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors duration-300"
+              >
+                <i class="ri-twitter-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors duration-300"
+              >
+                <i class="ri-instagram-line"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors duration-300"
+              >
+                <i class="ri-youtube-fill"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-6">Categories</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >Furniture Reviews</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >Bed & Mattress</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >Couch & Seating</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >Home Appliances</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >Home Improvement</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >Art & Decor</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-6">Company</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >Our Team</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >Press</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >Blog</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-6">Newsletter</h3>
+            <p class="text-gray-400 mb-4">
+              Subscribe to get the latest reviews and home furnishing tips.
+            </p>
+            <div class="flex">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="flex-1 px-4 py-3 bg-gray-800 border-none rounded-l-button text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+              <button
+                class="bg-primary px-6 py-3 rounded-r-button hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap"
+              >
+                <i class="ri-send-plane-fill"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 mb-4 md:mb-0">
+              &copy; 2025 HomeLux Reviews. All rights reserved.
+            </p>
+            <div class="flex space-x-6">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors duration-300"
+                >Privacy Policy</a
+              >
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors duration-300"
+                >Terms of Service</a
+              >
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors duration-300"
+                >Cookie Policy</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script id="hero-slider">
+      document.addEventListener("DOMContentLoaded", function () {
+        const slides = document.querySelectorAll(".hero-slide");
+        const dots = document.querySelectorAll(".slider-dot");
+        let currentSlide = 0;
+        function showSlide(index) {
+          slides.forEach((slide) => slide.classList.remove("active"));
+          dots.forEach((dot) => dot.classList.remove("active"));
+          slides[index].classList.add("active");
+          dots[index].classList.add("active");
+        }
+        function nextSlide() {
+          currentSlide = (currentSlide + 1) % slides.length;
+          showSlide(currentSlide);
+        }
+        dots.forEach((dot, index) => {
+          dot.addEventListener("click", () => {
+            currentSlide = index;
+            showSlide(currentSlide);
+          });
+        });
+        setInterval(nextSlide, 5000);
+      });
+    </script>
+    <script id="product-modal">
+      document.addEventListener("DOMContentLoaded", function () {
+        const modal = document.getElementById("productModal");
+        const closeBtn = document.getElementById("closeModal");
+        const productImages = document.querySelectorAll(".product-image");
+        const productData = {
+          1: {
+            title: "Premium Leather Recliner",
+            description:
+              "Experience ultimate comfort with this premium leather recliner featuring genuine leather upholstery, ergonomic design, and superior craftsmanship. Perfect for any modern living space.",
+            price: "$1,299.99",
+            rating: "4.9/5 (234 reviews)",
+            tags: ["Furniture", "Leather", "Recliner"],
+          },
+          2: {
+            title: "Modern Dining Set",
+            description:
+              "Elegant 6-piece dining set crafted from natural wood with contemporary design. Includes table and matching chairs perfect for family gatherings and entertaining guests.",
+            price: "$899.99",
+            rating: "4.7/5 (189 reviews)",
+            tags: ["Furniture", "Dining", "Wood"],
+          },
+          3: {
+            title: "Smart Security System",
+            description:
+              "Advanced wireless security system with mobile app control, night vision, and cloud storage. Keep your home safe with cutting-edge technology.",
+            price: "$299.99",
+            rating: "4.8/5 (312 reviews)",
+            tags: ["Security", "Smart Home", "Technology"],
+          },
+          4: {
+            title: "Luxury Bedding Set",
+            description:
+              "Premium cotton sheets with 1000 thread count for the ultimate sleeping experience. Includes pillowcases, fitted sheet, and duvet cover.",
+            price: "$199.99",
+            rating: "4.6/5 (267 reviews)",
+            tags: ["Bedding", "Cotton", "Luxury"],
+          },
+        };
+        productImages.forEach((img) => {
+          img.addEventListener("click", function () {
+            const productId = this.getAttribute("data-product");
+            const product = productData[productId];
+            if (product) {
+              document.getElementById("modalTitle").textContent = product.title;
+              document.getElementById("modalDescription").textContent =
+                product.description;
+              modal.classList.add("active");
+              if (typeof $ !== "undefined") {
+                $("#productGallery").owlCarousel({
+                  items: 1,
+                  loop: true,
+                  nav: true,
+                  dots: true,
+                  autoplay: false,
+                  navText: [
+                    '<i class="ri-arrow-left-line"></i>',
+                    '<i class="ri-arrow-right-line"></i>',
+                  ],
+                });
+              }
+            }
+          });
+        });
+        closeBtn.addEventListener("click", function () {
+          modal.classList.remove("active");
+          if (typeof $ !== "undefined") {
+            $("#productGallery").trigger("destroy.owl.carousel");
+          }
+        });
+      });
+    </script>
+    <script id="category-navigation">
+      document.addEventListener("DOMContentLoaded", function () {
+        const categoryCards = document.querySelectorAll(".category-card");
+        categoryCards.forEach((card) => {
+          card.addEventListener("click", function () {
+            const categoryName = this.querySelector("h3").textContent;
+            console.log(`Navigating to ${categoryName} category page`);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
