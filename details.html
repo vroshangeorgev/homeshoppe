@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Herman Miller Aeron Chair Review - HomeReview</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2563eb",
+              secondary: "#1e40af",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+            fontFamily: {
+              playfair: ["Playfair Display", "serif"],
+              inter: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :where([class^="ri-"])::before {
+      content: "\f3c2";
+      }
+    </style>
+  </head>
+  <body class="font-inter bg-gray-50">
+    <header
+      class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <div class="flex items-center space-x-12">
+            <div class="flex items-center space-x-3">
+              <div
+                class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center"
+              >
+                <i class="ri-home-heart-fill text-white text-lg"></i>
+              </div>
+              <h1 class="text-2xl font-playfair font-bold text-gray-900">
+                HomeReview
+              </h1>
+            </div>
+            <nav class="hidden lg:flex items-center" id="main-navigation">
+              <div
+                class="flex items-center bg-gray-50 rounded-full p-1"
+                id="nav-container"
+              ></div>
+            </nav>
+          </div>
+          <div class="flex items-center space-x-4">
+            <div class="hidden md:flex items-center space-x-3">
+              <button
+                class="w-10 h-10 flex items-center justify-center text-gray-600 hover:text-primary hover:bg-gray-100 rounded-lg transition-all duration-300"
+              >
+                <i class="ri-notification-line"></i>
+              </button>
+              <button
+                class="w-10 h-10 flex items-center justify-center text-gray-600 hover:text-primary hover:bg-gray-100 rounded-lg transition-all duration-300"
+              >
+                <i class="ri-bookmark-line"></i>
+              </button>
+              <button
+                class="bg-primary hover:bg-secondary text-white px-4 py-2 !rounded-button font-medium transition-all duration-300 whitespace-nowrap text-sm"
+              >
+                Subscribe
+              </button>
+            </div>
+            <button
+              class="lg:hidden w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary hover:bg-gray-100 rounded-lg transition-all duration-300"
+            >
+              <i class="ri-menu-line"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="flex flex-col lg:flex-row gap-8">
+        <div class="lg:w-1/2">
+          <div class="bg-white rounded-xl shadow-sm overflow-hidden mb-6">
+            <div class="relative">
+              <div
+                class="aspect-square bg-gray-100 overflow-hidden"
+                id="main-image-container"
+              >
+                <img
+                  id="main-image"
+                  src=""
+                  alt=""
+                  class="w-full h-full object-cover object-top"
+                />
+              </div>
+              <button
+                class="absolute top-4 right-4 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors"
+              >
+                <i class="ri-heart-line text-gray-600"></i>
+              </button>
+            </div>
+            <div class="p-4">
+              <div
+                class="flex space-x-2 overflow-x-auto"
+                id="thumbnail-container"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:w-1/2">
+          <div class="bg-white rounded-xl shadow-sm p-6 mb-6">
+            <div class="mb-4">
+              <span
+                class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full"
+                id="category-badge"
+              ></span>
+            </div>
+            <h1
+              class="text-3xl font-playfair font-bold text-gray-900 mb-4"
+              id="product-title"
+            ></h1>
+            <p class="text-lg text-gray-600 mb-6" id="product-description"></p>
+            <div class="flex items-center space-x-4 mb-6">
+              <div class="flex items-center space-x-1">
+                <div class="flex text-yellow-400" id="rating-stars"></div>
+                <span class="text-gray-600 text-sm" id="rating-score"></span>
+              </div>
+              <span class="text-gray-400">|</span>
+              <span class="text-gray-600 text-sm" id="review-count"></span>
+            </div>
+            <div class="flex items-baseline space-x-2 mb-8">
+              <span
+                class="text-4xl font-bold text-gray-900"
+                id="product-price"
+              ></span>
+              <span class="text-lg text-gray-500" id="price-note"></span>
+            </div>
+            <button
+              class="w-full bg-orange-500 hover:bg-orange-600 text-white py-4 px-6 !rounded-button font-semibold text-lg transition-colors whitespace-nowrap mb-4"
+              id="buy-button"
+            ></button>
+            <div
+              class="flex items-center justify-center space-x-2 text-sm text-gray-500"
+            >
+              <i class="ri-truck-line"></i>
+              <span>Free shipping on orders over $50</span>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-sm p-6">
+            <h2 class="text-xl font-playfair font-semibold text-gray-900 mb-4">
+              Product Highlights
+            </h2>
+            <ul class="space-y-3" id="product-highlights"></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12">
+        <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+          <div class="border-b border-gray-200">
+            <div class="flex space-x-8 px-6">
+              <button
+                class="py-4 border-b-2 border-primary text-primary font-medium tab-button active"
+                data-tab="review"
+              >
+                Detailed Review
+              </button>
+              <button
+                class="py-4 border-b-2 border-transparent text-gray-500 hover:text-gray-700 font-medium tab-button"
+                data-tab="specs"
+              >
+                Specifications
+              </button>
+              <button
+                class="py-4 border-b-2 border-transparent text-gray-500 hover:text-gray-700 font-medium tab-button"
+                data-tab="pros-cons"
+              >
+                Pros & Cons
+              </button>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <div id="review-content" class="tab-content active">
+              <div class="prose max-w-none">
+                <div id="review-sections"></div>
+              </div>
+            </div>
+
+            <div id="specs-content" class="tab-content hidden">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div id="specifications-list"></div>
+              </div>
+            </div>
+
+            <div id="pros-cons-content" class="tab-content hidden">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h3
+                    class="text-lg font-semibold text-green-600 mb-4 flex items-center"
+                  >
+                    <i class="ri-check-line mr-2"></i>
+                    Pros
+                  </h3>
+                  <ul class="space-y-2" id="pros-list"></ul>
+                </div>
+                <div>
+                  <h3
+                    class="text-lg font-semibold text-red-600 mb-4 flex items-center"
+                  >
+                    <i class="ri-close-line mr-2"></i>
+                    Cons
+                  </h3>
+                  <ul class="space-y-2" id="cons-list"></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12">
+        <h2 class="text-2xl font-playfair font-bold text-gray-900 mb-6">
+          Related Products
+        </h2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          id="related-products"
+        ></div>
+      </div>
+    </main>
+
+    <footer class="bg-gray-900 text-white mt-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="col-span-1 md:col-span-2">
+            <h3 class="text-2xl font-playfair font-bold mb-4">HomeReview</h3>
+            <p class="text-gray-300 mb-6 max-w-md">
+              Your trusted source for honest, detailed home product reviews. We
+              test everything so you can shop with confidence.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
+              >
+                <i class="ri-facebook-fill text-white"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
+              >
+                <i class="ri-twitter-fill text-white"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
+              >
+                <i class="ri-instagram-fill text-white"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
+              >
+                <i class="ri-youtube-fill text-white"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-semibold text-lg mb-4">Categories</h4>
+            <ul class="space-y-2" id="footer-categories"></ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-lg mb-4">Company</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-white transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-white transition-colors"
+                  >Our Process</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-white transition-colors"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-white transition-colors"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-white transition-colors"
+                  >Press</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-white transition-colors"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-white transition-colors"
+                  >Terms of Service</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 text-sm">
+              © 2025 HomeReview. All rights reserved.
+            </p>
+            <div class="flex items-center space-x-6 mt-4 md:mt-0">
+              <div class="flex items-center space-x-2">
+                <i class="ri-visa-fill text-2xl text-gray-400"></i>
+                <i class="ri-mastercard-fill text-2xl text-gray-400"></i>
+                <i class="ri-paypal-fill text-2xl text-gray-400"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script id="data-loader">
+      const productData = {
+        id: "aeron-chair-2024",
+        title: "Herman Miller Aeron Chair - Complete Review",
+        description:
+          "The ultimate ergonomic office chair designed for all-day comfort and productivity.",
+        category: "Furniture Reviews",
+        price: "$1,395",
+        priceNote: "Starting from",
+        rating: 4.5,
+        reviewCount: "2,847 reviews",
+        amazonUrl: "https://amazon.com/herman-miller-aeron",
+        images: [
+          {
+            url: "https://readdy.ai/api/search-image?query=herman%20miller%20aeron%20chair%20black%20ergonomic%20office%20furniture%20premium%20design%20professional%20workspace%20modern%20chair%20clean%20white%20background%20product%20photography&width=600&height=600&seq=aeron001&orientation=squarish",
+            alt: "Herman Miller Aeron Chair - Front View",
+          },
+          {
+            url: "https://readdy.ai/api/search-image?query=herman%20miller%20aeron%20chair%20side%20profile%20ergonomic%20design%20mesh%20back%20office%20furniture%20professional%20workspace%20clean%20white%20background%20product%20photography&width=600&height=600&seq=aeron002&orientation=squarish",
+            alt: "Herman Miller Aeron Chair - Side View",
+          },
+          {
+            url: "https://readdy.ai/api/search-image?query=herman%20miller%20aeron%20chair%20back%20view%20mesh%20design%20ergonomic%20support%20office%20furniture%20premium%20quality%20clean%20white%20background%20product%20photography&width=600&height=600&seq=aeron003&orientation=squarish",
+            alt: "Herman Miller Aeron Chair - Back View",
+          },
+          {
+            url: "https://readdy.ai/api/search-image?query=herman%20miller%20aeron%20chair%20detail%20armrest%20adjustment%20mechanism%20ergonomic%20features%20office%20furniture%20premium%20quality%20clean%20white%20background&width=600&height=600&seq=aeron004&orientation=squarish",
+            alt: "Herman Miller Aeron Chair - Detail View",
+          },
+        ],
+        highlights: [
+          "12-year warranty with exceptional build quality",
+          "Patented PostureFit SL lumbar support system",
+          "Breathable mesh design prevents overheating",
+          "Fully adjustable for personalized ergonomics",
+          "Sustainable materials and manufacturing process",
+        ],
+        reviewSections: [
+          {
+            title: "Design and Build Quality",
+            content:
+              "The Herman Miller Aeron chair represents the pinnacle of ergonomic design and engineering excellence. After six months of intensive testing in our office environment, we can confidently say this chair lives up to its legendary reputation. The iconic mesh design isn't just aesthetically pleasing—it serves a crucial functional purpose by promoting airflow and preventing the heat buildup common with traditional upholstered chairs.",
+          },
+          {
+            title: "Ergonomic Performance",
+            content:
+              "What sets the Aeron apart is its PostureFit SL system, which provides targeted support to the sacral region of the spine. During our testing period, multiple team members with different body types and sitting preferences found the chair adaptable to their needs. The tilt mechanism offers smooth, controlled movement, while the forward tilt feature promotes active sitting throughout the workday.",
+          },
+          {
+            title: "Long-term Comfort Assessment",
+            content:
+              "Over our extended testing period, the Aeron consistently delivered on its promise of all-day comfort. The mesh seat eliminates pressure points that typically develop with foam cushions, while the armrests provide stable support without restricting movement. We particularly appreciated how the chair's design encourages proper posture without feeling restrictive or uncomfortable.",
+          },
+          {
+            title: "Value and Durability Analysis",
+            content:
+              "While the Aeron represents a significant investment, our analysis suggests it offers excellent long-term value. The 12-year warranty reflects Herman Miller's confidence in the product's durability, and our stress testing confirmed the chair's ability to withstand intensive daily use. When compared to replacing multiple cheaper chairs over the same period, the Aeron's cost per year of service becomes quite reasonable.",
+          },
+        ],
+        specifications: [
+          {
+            category: "Dimensions",
+            items: [
+              { label: "Overall Height", value: '38.75" - 42.5"' },
+              { label: "Seat Width", value: '20.25"' },
+              { label: "Seat Depth", value: '16.75"' },
+              { label: "Weight Capacity", value: "350 lbs" },
+            ],
+          },
+          {
+            category: "Materials",
+            items: [
+              { label: "Frame", value: "Die-cast aluminum" },
+              { label: "Mesh", value: "Woven suspension fabric" },
+              { label: "Base", value: "Polished aluminum" },
+              { label: "Casters", value: "Carpet or hard floor options" },
+            ],
+          },
+        ],
+        pros: [
+          "Exceptional build quality and durability",
+          "Superior ergonomic support for long work sessions",
+          "Breathable mesh prevents overheating",
+          "Highly adjustable to fit different body types",
+          "Comprehensive 12-year warranty coverage",
+          "Environmentally sustainable manufacturing",
+        ],
+        cons: [
+          "High upfront cost may deter some buyers",
+          "Mesh seat may feel firm for some users",
+          "Limited color options compared to competitors",
+          "Assembly can be complex without professional help",
+        ],
+      };
+
+      const navigationData = {
+        categories: [
+          { name: "Furniture Reviews", active: true },
+          { name: "Bed & Mattress", active: false },
+          { name: "Couch", active: false },
+          { name: "Appliances", active: false },
+          { name: "Improvement", active: false },
+          { name: "Art & Decor", active: false },
+          { name: "Lighting", active: false },
+        ],
+      };
+
+      const relatedProductsData = [
+        {
+          id: "steelcase-leap",
+          title: "Steelcase Leap V2 Office Chair",
+          image:
+            "https://readdy.ai/api/search-image?query=steelcase%20leap%20office%20chair%20ergonomic%20design%20professional%20workspace%20modern%20furniture%20clean%20white%20background%20product%20photography&width=400&height=300&seq=steelcase001&orientation=landscape",
+          rating: 4.3,
+          price: "$1,086",
+          category: "Furniture Reviews",
+        },
+        {
+          id: "herman-miller-embody",
+          title: "Herman Miller Embody Chair",
+          image:
+            "https://readdy.ai/api/search-image?query=herman%20miller%20embody%20chair%20ergonomic%20office%20furniture%20modern%20design%20professional%20workspace%20clean%20white%20background%20product%20photography&width=400&height=300&seq=embody001&orientation=landscape",
+          rating: 4.6,
+          price: "$1,695",
+          category: "Furniture Reviews",
+        },
+        {
+          id: "okamura-contessa",
+          title: "Okamura Contessa II Office Chair",
+          image:
+            "https://readdy.ai/api/search-image?query=okamura%20contessa%20office%20chair%20japanese%20design%20ergonomic%20furniture%20professional%20workspace%20modern%20chair%20clean%20white%20background&width=400&height=300&seq=okamura001&orientation=landscape",
+          rating: 4.4,
+          price: "$1,299",
+          category: "Furniture Reviews",
+        },
+      ];
+    </script>
+
+    <script id="page-initialization">
+      document.addEventListener("DOMContentLoaded", function () {
+        loadNavigationData();
+        loadProductData();
+        loadRelatedProducts();
+        initializeImageGallery();
+        initializeTabSwitching();
+      });
+
+      function loadNavigationData() {
+        const navContainer = document.getElementById("nav-container");
+        const footerCategories = document.getElementById("footer-categories");
+
+        navigationData.categories.forEach((category) => {
+          const navItem = document.createElement("a");
+          navItem.href = "#";
+          navItem.className = category.active
+            ? "px-4 py-2 bg-primary text-white rounded-full text-sm font-medium transition-all duration-300 hover:bg-secondary whitespace-nowrap"
+            : "px-4 py-2 text-gray-700 hover:text-primary hover:bg-white rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap";
+          navItem.textContent = category.name;
+          navContainer.appendChild(navItem);
+
+          const footerItem = document.createElement("li");
+          const footerLink = document.createElement("a");
+          footerLink.href = "#";
+          footerLink.className = "text-gray-300 hover:text-white transition-colors";
+          footerLink.textContent = category.name;
+          footerItem.appendChild(footerLink);
+          footerCategories.appendChild(footerItem);
+        });
+      }
+
+      function loadProductData() {
+        document.getElementById("category-badge").textContent = productData.category;
+        document.getElementById("product-title").textContent = productData.title;
+        document.getElementById("product-description").textContent =
+          productData.description;
+        document.getElementById("product-price").textContent = productData.price;
+        document.getElementById("price-note").textContent = productData.priceNote;
+        document.getElementById("review-count").textContent = productData.reviewCount;
+        document.getElementById("buy-button").textContent = "Buy from Amazon";
+
+        const ratingStars = document.getElementById("rating-stars");
+        const fullStars = Math.floor(productData.rating);
+        const hasHalfStar = productData.rating % 1 !== 0;
+
+        for (let i = 0; i < fullStars; i++) {
+          const star = document.createElement("i");
+          star.className = "ri-star-fill text-sm";
+          ratingStars.appendChild(star);
+        }
+
+        if (hasHalfStar) {
+          const halfStar = document.createElement("i");
+          halfStar.className = "ri-star-half-fill text-sm";
+          ratingStars.appendChild(halfStar);
+        }
+
+        const remainingStars = 5 - Math.ceil(productData.rating);
+        for (let i = 0; i < remainingStars; i++) {
+          const star = document.createElement("i");
+          star.className = "ri-star-line text-sm";
+          ratingStars.appendChild(star);
+        }
+
+        document.getElementById("rating-score").textContent =
+          `(${productData.rating})`;
+
+        const highlights = document.getElementById("product-highlights");
+        productData.highlights.forEach((highlight) => {
+          const li = document.createElement("li");
+          li.className = "flex items-start space-x-3";
+          li.innerHTML = `
+      <div class="w-5 h-5 flex items-center justify-center mt-0.5">
+      <i class="ri-check-line text-green-500"></i>
+      </div>
+      <span class="text-gray-700">${highlight}</span>
+      `;
+          highlights.appendChild(li);
+        });
+
+        const reviewSections = document.getElementById("review-sections");
+        productData.reviewSections.forEach((section) => {
+          const sectionDiv = document.createElement("div");
+          sectionDiv.className = "mb-8";
+          sectionDiv.innerHTML = `
+      <h3 class="text-xl font-playfair font-semibold text-gray-900 mb-4">${section.title}</h3>
+      <p class="text-gray-700 leading-relaxed">${section.content}</p>
+      `;
+          reviewSections.appendChild(sectionDiv);
+        });
+
+        const specsList = document.getElementById("specifications-list");
+        productData.specifications.forEach((spec) => {
+          const specDiv = document.createElement("div");
+          specDiv.innerHTML = `
+      <h4 class="font-semibold text-gray-900 mb-3">${spec.category}</h4>
+      <dl class="space-y-2">
+      ${spec.items
+        .map(
+          (item) => `
+      <div class="flex justify-between">
+      <dt class="text-gray-600">${item.label}</dt>
+      <dd class="font-medium text-gray-900">${item.value}</dd>
+      </div>
+      `,
+        )
+        .join("")}
+      </dl>
+      `;
+          specsList.appendChild(specDiv);
+        });
+
+        const prosList = document.getElementById("pros-list");
+        productData.pros.forEach((pro) => {
+          const li = document.createElement("li");
+          li.className = "flex items-start space-x-2";
+          li.innerHTML = `
+      <div class="w-4 h-4 flex items-center justify-center mt-1">
+      <i class="ri-check-line text-green-500 text-sm"></i>
+      </div>
+      <span class="text-gray-700">${pro}</span>
+      `;
+          prosList.appendChild(li);
+        });
+
+        const consList = document.getElementById("cons-list");
+        productData.cons.forEach((con) => {
+          const li = document.createElement("li");
+          li.className = "flex items-start space-x-2";
+          li.innerHTML = `
+      <div class="w-4 h-4 flex items-center justify-center mt-1">
+      <i class="ri-close-line text-red-500 text-sm"></i>
+      </div>
+      <span class="text-gray-700">${con}</span>
+      `;
+          consList.appendChild(li);
+        });
+      }
+
+      function initializeImageGallery() {
+        const mainImage = document.getElementById("main-image");
+        const thumbnailContainer = document.getElementById("thumbnail-container");
+        let currentImageIndex = 0;
+
+        mainImage.src = productData.images[0].url;
+        mainImage.alt = productData.images[0].alt;
+
+        productData.images.forEach((image, index) => {
+          const thumbnail = document.createElement("button");
+          thumbnail.className = `w-16 h-16 rounded-lg overflow-hidden border-2 transition-colors ${index === 0 ? "border-primary" : "border-gray-200 hover:border-gray-300"}`;
+          thumbnail.innerHTML = `<img src="${image.url}" alt="${image.alt}" class="w-full h-full object-cover object-top">`;
+          thumbnail.addEventListener("click", () => {
+            currentImageIndex = index;
+            mainImage.src = image.url;
+            mainImage.alt = image.alt;
+            updateThumbnailSelection(index);
+          });
+          thumbnailContainer.appendChild(thumbnail);
+        });
+
+        function updateThumbnailSelection(activeIndex) {
+          const thumbnails = thumbnailContainer.querySelectorAll("button");
+          thumbnails.forEach((thumb, index) => {
+            thumb.className = `w-16 h-16 rounded-lg overflow-hidden border-2 transition-colors ${index === activeIndex ? "border-primary" : "border-gray-200 hover:border-gray-300"}`;
+          });
+        }
+      }
+
+      function loadRelatedProducts() {
+        const container = document.getElementById("related-products");
+        relatedProductsData.forEach((product) => {
+          const productCard = document.createElement("div");
+          productCard.className =
+            "bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden group cursor-pointer";
+          productCard.innerHTML = `
+      <div class="aspect-video overflow-hidden">
+      <img src="${product.image}" alt="${product.title}" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+      </div>
+      <div class="p-4">
+      <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">${product.category}</span>
+      <h3 class="font-playfair font-semibold text-gray-900 mt-2 mb-2">${product.title}</h3>
+      <div class="flex items-center justify-between">
+      <div class="flex items-center space-x-1">
+      <div class="flex text-yellow-400 text-sm">
+      ${Array(Math.floor(product.rating)).fill('<i class="ri-star-fill"></i>').join("")}
+      ${product.rating % 1 ? '<i class="ri-star-half-fill"></i>' : ""}
+      ${Array(5 - Math.ceil(product.rating))
+        .fill('<i class="ri-star-line"></i>')
+        .join("")}
+      </div>
+      <span class="text-gray-600 text-sm">(${product.rating})</span>
+      </div>
+      <span class="font-bold text-gray-900">${product.price}</span>
+      </div>
+      </div>
+      `;
+          container.appendChild(productCard);
+        });
+      }
+
+      function initializeTabSwitching() {
+        const tabButtons = document.querySelectorAll(".tab-button");
+        const tabContents = document.querySelectorAll(".tab-content");
+
+        tabButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const targetTab = button.getAttribute("data-tab");
+
+            tabButtons.forEach((btn) => {
+              btn.classList.remove("border-primary", "text-primary", "active");
+              btn.classList.add("border-transparent", "text-gray-500");
+            });
+            button.classList.add("border-primary", "text-primary", "active");
+            button.classList.remove("border-transparent", "text-gray-500");
+
+            tabContents.forEach((content) => {
+              content.classList.add("hidden");
+              content.classList.remove("active");
+            });
+            document
+              .getElementById(`${targetTab}-content`)
+              .classList.remove("hidden");
+            document.getElementById(`${targetTab}-content`).classList.add("active");
+          });
+        });
+      }
+    </script>
+
+    <script id="buy-button-handler">
+      document.addEventListener("DOMContentLoaded", function () {
+        const buyButton = document.getElementById("buy-button");
+        buyButton.addEventListener("click", function () {
+          window.open(productData.amazonUrl, "_blank");
+        });
+      });
+    </script>
+  </body>
+</html>
