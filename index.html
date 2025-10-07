@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HomeReview - Your Trusted Source for Home Product Reviews</title>
+<script src="https://cdn.tailwindcss.com/3.4.16">
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: "#2563eb",
+        secondary: "#1e40af",
+      },
+      borderRadius: {
+        none: "0px",
+        sm: "4px",
+        DEFAULT: "8px",
+        md: "12px",
+        lg: "16px",
+        xl: "20px",
+        "2xl": "24px",
+        "3xl": "32px",
+        full: "9999px",
+        button: "8px",
+      },
+      fontFamily: {
+        playfair: ["Playfair Display", "serif"],
+        inter: ["Inter", "sans-serif"],
+      },
+    },
+  },
+};
+</script>
+<style>
+:where([class^="ri-"])::before {
+content: "\f3c2";
+}
+.hero-bg {
+background-image: url('https://readdy.ai/api/search-image?query=modern%20elegant%20home%20interior%20living%20room%20with%20sophisticated%20furniture%20natural%20lighting%20minimalist%20design%20premium%20quality%20lifestyle%20photography%20clean%20white%20background%20luxury%20home%20decor%20sophisticated%20ambiance&width=1920&height=800&seq=hero001&orientation=landscape');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+</style>
+</head>
+<body class="font-inter bg-gray-50">
+<!-- Header -->
+<header class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<div class="flex items-center space-x-12">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+<i class="ri-home-heart-fill text-white text-lg"></i>
+</div>
+<h1 class="text-2xl font-playfair font-bold text-gray-900">HomeReview</h1>
+</div>
+<nav class="hidden lg:flex items-center">
+<div class="flex items-center bg-gray-50 rounded-full p-1">
+<a href="#" class="px-4 py-2 bg-primary text-white rounded-full text-sm font-medium transition-all duration-300 hover:bg-secondary whitespace-nowrap">Furniture Reviews</a>
+<a href="#" class="px-4 py-2 text-gray-700 hover:text-primary hover:bg-white rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap">Bed & Mattress</a>
+<a href="#" class="px-4 py-2 text-gray-700 hover:text-primary hover:bg-white rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap">Couch</a>
+<a href="#" class="px-4 py-2 text-gray-700 hover:text-primary hover:bg-white rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap">Appliances</a>
+<a href="#" class="px-4 py-2 text-gray-700 hover:text-primary hover:bg-white rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap">Improvement</a>
+<a href="#" class="px-4 py-2 text-gray-700 hover:text-primary hover:bg-white rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap">Art & Decor</a>
+<a href="#" class="px-4 py-2 text-gray-700 hover:text-primary hover:bg-white rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap">Lighting</a>
+</div>
+</nav>
+</div>
+<div class="flex items-center space-x-4">
+<div class="hidden md:flex items-center space-x-3">
+<button class="w-10 h-10 flex items-center justify-center text-gray-600 hover:text-primary hover:bg-gray-100 rounded-lg transition-all duration-300">
+<i class="ri-notification-line"></i>
+</button>
+<button class="w-10 h-10 flex items-center justify-center text-gray-600 hover:text-primary hover:bg-gray-100 rounded-lg transition-all duration-300">
+<i class="ri-bookmark-line"></i>
+</button>
+<button class="bg-primary hover:bg-secondary text-white px-4 py-2 !rounded-button font-medium transition-all duration-300 whitespace-nowrap text-sm">
+Subscribe
+</button>
+</div>
+<button class="lg:hidden w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary hover:bg-gray-100 rounded-lg transition-all duration-300">
+<i class="ri-menu-line"></i>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero-bg relative min-h-[500px] flex items-center">
+<div class="absolute inset-0 bg-black bg-opacity-30"></div>
+<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+<div class="max-w-2xl">
+<h1 class="text-5xl font-playfair font-bold text-white mb-6 leading-tight">Your Trusted Source for Home Product Reviews</h1>
+<p class="text-xl text-gray-100 mb-8 font-light">Discover honest, detailed reviews of the best home products. From furniture to appliances, we help you make informed decisions for your perfect home.</p>
+<button class="bg-primary hover:bg-secondary text-white px-8 py-3 !rounded-button font-semibold transition-all duration-300 transform hover:scale-105 whitespace-nowrap">
+Explore Reviews
+</button>
+</div>
+</div>
+</section>
+<!-- Main Content with Sidebar -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- Mobile Filter Toggle -->
+<div class="lg:hidden">
+<button id="filter-toggle" class="w-full flex items-center justify-between px-4 py-3 bg-white rounded-lg border border-gray-200 hover:border-primary transition-colors">
+<span class="font-medium text-gray-900">Filters</span>
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-filter-line text-gray-600"></i>
+</div>
+</button>
+</div>
+<!-- Sidebar Filters -->
+<aside id="filters-sidebar" class="hidden lg:block lg:w-80 bg-white rounded-xl shadow-sm p-6 h-fit lg:sticky lg:top-24">
+<div class="mb-8">
+<h3 class="text-lg font-playfair font-semibold text-gray-900 mb-4">Filters</h3>
+<button class="text-sm text-primary hover:text-secondary font-medium">Clear All</button>
+</div>
+<!-- Categories Filter -->
+<div class="mb-8">
+<h4 class="font-semibold text-gray-900 mb-4">Categories</h4>
+<div class="space-y-3">
+<label class="flex items-center">
+<input type="checkbox" class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary focus:ring-2">
+<span class="ml-3 text-gray-700">Furniture Reviews</span>
+<span class="ml-auto text-sm text-gray-500">(124)</span>
+</label>
+<label class="flex items-center">
+<input type="checkbox" class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary focus:ring-2">
+<span class="ml-3 text-gray-700">Bed & Mattress</span>
+<span class="ml-auto text-sm text-gray-500">(87)</span>
+</label>
+<label class="flex items-center">
+<input type="checkbox" class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary focus:ring-2">
+<span class="ml-3 text-gray-700">Couch</span>
+<span class="ml-auto text-sm text-gray-500">(45)</span>
+</label>
+<label class="flex items-center">
+<input type="checkbox" class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary focus:ring-2">
+<span class="ml-3 text-gray-700">Home Appliances</span>
+<span class="ml-auto text-sm text-gray-500">(98)</span>
+</label>
+<label class="flex items-center">
+<input type="checkbox" class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary focus:ring-2">
+<span class="ml-3 text-gray-700">Home Improvement</span>
+<span class="ml-auto text-sm text-gray-500">(76)</span>
+</label>
+<label class="flex items-center">
+<input type="checkbox" class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary focus:ring-2">
+<span class="ml-3 text-gray-700">Art & Decor</span>
+<span class="ml-auto text-sm text-gray-500">(32)</span>
+</label>
+<label class="flex items-center">
+<input type="checkbox" class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary focus:ring-2">
+<span class="ml-3 text-gray-700">Lighting</span>
+<span class="ml-auto text-sm text-gray-500">(54)</span>
+</label>
+</div>
+</div>
+<!-- Price Range Filter -->
+<div class="mb-8">
+<h4 class="font-semibold text-gray-900 mb-4">Price Range</h4>
+<div class="space-y-3">
+<label class="flex items-center">
+<input type="radio" name="price" class="w-4 h-4 text-primary border-gray-300 focus:ring-primary focus:ring-2">
+<span class="ml-3 text-gray-700">Under $100</span>
+<span class="ml-auto text-sm text-gray-500">(89)</span>
+</label>
+<label class="flex items-center">
+<input type="radio" name="price" class="w-4 h-4 text-primary border-gray-300 focus:ring-primary focus:ring-2">
+<span class="ml-3 text-gray-700">$100 - $500</span>
+<span class="ml-auto text-sm text-gray-500">(156)</span>
+</label>
+<label class="flex items-center">
+<input type="radio" name="price" class="w-4 h-4 text-primary border-gray-300 focus:ring-primary focus:ring-2">
+<span class="ml-3 text-gray-700">$500 - $1,000</span>
+<span class="ml-auto text-sm text-gray-500">(78)</span>
+</label>
+<label class="flex items-center">
+<input type="radio" name="price" class="w-4 h-4 text-primary border-gray-300 focus:ring-primary focus:ring-2">
+<span class="ml-3 text-gray-700">$1,000 - $2,000</span>
+<span class="ml-auto text-sm text-gray-500">(45)</span>
+</label>
+<label class="flex items-center">
+<input type="radio" name="price" class="w-4 h-4 text-primary border-gray-300 focus:ring-primary focus:ring-2">
+<span class="ml-3 text-gray-700">Over $2,000</span>
+<span class="ml-auto text-sm text-gray-500">(23)</span>
+</label>
+</div>
+</div>
+<!-- Rating Filter -->
+<div class="mb-8">
+<h4 class="font-semibold text-gray-900 mb-4">Rating</h4>
+<div class="space-y-3">
+<label class="flex items-center">
+<input type="checkbox" class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary focus:ring-2">
+<div class="ml-3 flex items-center">
+<div class="flex text-yellow-400 text-sm">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+<span class="ml-2 text-gray-700">5 Stars</span>
+</div>
+<span class="ml-auto text-sm text-gray-500">(67)</span>
+</label>
+<label class="flex items-center">
+<input type="checkbox" class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary focus:ring-2">
+<div class="ml-3 flex items-center">
+<div class="flex text-yellow-400 text-sm">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-line"></i>
+</div>
+<span class="ml-2 text-gray-700">4+ Stars</span>
+</div>
+<span class="ml-auto text-sm text-gray-500">(234)</span>
+</label>
+<label class="flex items-center">
+<input type="checkbox" class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary focus:ring-2">
+<div class="ml-3 flex items-center">
+<div class="flex text-yellow-400 text-sm">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-line"></i>
+<i class="ri-star-line"></i>
+</div>
+<span class="ml-2 text-gray-700">3+ Stars</span>
+</div>
+<span class="ml-auto text-sm text-gray-500">(123)</span>
+</label>
+</div>
+</div>
+</aside>
+<!-- Products List -->
+<div class="flex-1 lg:flex-1">
+<!-- Search and Sort Header -->
+<div class="mb-6">
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-3">
+<h2 class="text-xl sm:text-2xl font-playfair font-semibold text-gray-900">Home Product Reviews</h2>
+<span class="text-gray-600 text-sm">516 results</span>
+</div>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+<div class="relative flex-1 sm:max-w-md">
+<input type="text" placeholder="Search reviews and products..." class="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm bg-white">
+<div class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 flex items-center justify-center">
+<i class="ri-search-line text-gray-400 text-sm"></i>
+</div>
+</div>
+<div class="relative">
+<button class="flex items-center justify-between w-full sm:w-auto space-x-2 px-4 py-3 border border-gray-300 rounded-lg hover:border-primary transition-colors bg-white whitespace-nowrap">
+<span class="text-gray-700 font-medium text-sm">Sort by: Latest</span>
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-arrow-down-s-line text-gray-500"></i>
+</div>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Rows -->
+<div class="space-y-6">
+<!-- Review Row 1 -->
+<article class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden group">
+<div class="flex flex-col sm:flex-row">
+<div class="w-full sm:w-64 h-48 sm:h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=premium%20ergonomic%20office%20chair%20modern%20design%20black%20leather%20executive%20furniture%20product%20photography%20clean%20white%20background%20professional%20quality&width=400&height=300&seq=chair001&orientation=landscape"
+alt="Premium Office Chair" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+</div>
+<div class="flex-1 p-4 sm:p-6">
+<div class="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-3 gap-2">
+<div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
+<span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full w-fit">Furniture Reviews</span>
+<div class="flex items-center space-x-1">
+<div class="flex text-yellow-400">
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-half-fill text-sm"></i>
+</div>
+<span class="text-gray-600 text-sm">(4.5)</span>
+</div>
+</div>
+<div class="flex flex-col sm:items-end">
+<span class="text-xl sm:text-2xl font-bold text-gray-900">$1,395</span>
+<span class="text-sm text-gray-500">Starting from</span>
+</div>
+</div>
+<h3 class="text-lg sm:text-xl font-playfair font-semibold text-gray-900 mb-3">Herman Miller Aeron Chair - Complete Review</h3>
+<p class="text-gray-600 text-sm leading-relaxed mb-4">An in-depth analysis of the iconic Herman Miller Aeron chair, covering comfort, durability, and value for money. We tested this premium office chair for 6 months to evaluate its ergonomic design, build quality, and whether it justifies the premium price point.</p>
+<div class="flex flex-col sm:flex-row gap-3">
+<button class="bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 px-6 !rounded-button font-medium transition-colors whitespace-nowrap">
+View Full Review
+</button>
+<button class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-6 !rounded-button font-medium transition-colors whitespace-nowrap">
+Buy on Amazon
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Review Row 2 -->
+<article class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden group">
+<div class="flex">
+<div class="w-64 h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=luxury%20memory%20foam%20mattress%20bedroom%20setup%20white%20linens%20modern%20minimalist%20design%20premium%20bedding%20product%20photography%20clean%20background&width=400&height=300&seq=mattress001&orientation=landscape"
+alt="Memory Foam Mattress" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+</div>
+<div class="flex-1 p-6">
+<div class="flex items-start justify-between mb-3">
+<div class="flex items-center space-x-3">
+<span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">Bed & Mattress</span>
+<div class="flex items-center space-x-1">
+<div class="flex text-yellow-400">
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+</div>
+<span class="text-gray-600 text-sm">(5.0)</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-2xl font-bold text-gray-900">$1,899</span>
+<span class="text-sm text-gray-500">Queen size</span>
+</div>
+</div>
+<h3 class="text-xl font-playfair font-semibold text-gray-900 mb-3">Purple Hybrid Premier Mattress Review</h3>
+<p class="text-gray-600 text-sm leading-relaxed mb-4 max-w-3xl">After 90 nights of testing, we share our honest thoughts on Purple's flagship hybrid mattress. Temperature regulation, support, and comfort levels analyzed in detail, including sleep quality measurements and partner disturbance testing.</p>
+<div class="flex space-x-3">
+<button class="bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 px-6 !rounded-button font-medium transition-colors whitespace-nowrap">
+View Full Review
+</button>
+<button class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-6 !rounded-button font-medium transition-colors whitespace-nowrap">
+Buy on Amazon
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Review Row 3 -->
+<article class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden group">
+<div class="flex">
+<div class="w-64 h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=modern%20sectional%20sofa%20living%20room%20contemporary%20design%20gray%20fabric%20comfortable%20seating%20furniture%20product%20photography%20clean%20minimalist%20background&width=400&height=300&seq=sofa001&orientation=landscape"
+alt="Sectional Sofa" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+</div>
+<div class="flex-1 p-6">
+<div class="flex items-start justify-between mb-3">
+<div class="flex items-center space-x-3">
+<span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Couch</span>
+<div class="flex items-center space-x-1">
+<div class="flex text-yellow-400">
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-line text-sm"></i>
+</div>
+<span class="text-gray-600 text-sm">(4.2)</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-2xl font-bold text-gray-900">$2,299</span>
+<span class="text-sm text-gray-500">3-piece set</span>
+</div>
+</div>
+<h3 class="text-xl font-playfair font-semibold text-gray-900 mb-3">West Elm Andes Sectional Sofa Review</h3>
+<p class="text-gray-600 text-sm leading-relaxed mb-4 max-w-3xl">A comprehensive review of West Elm's popular Andes sectional. We examine build quality, comfort, and whether it lives up to the hype for modern homes. Detailed analysis of fabric durability, frame construction, and assembly process.</p>
+<div class="flex space-x-3">
+<button class="bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 px-6 !rounded-button font-medium transition-colors whitespace-nowrap">
+View Full Review
+</button>
+<button class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-6 !rounded-button font-medium transition-colors whitespace-nowrap">
+Buy on Amazon
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Review Row 4 -->
+<article class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden group">
+<div class="flex">
+<div class="w-64 h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=premium%20kitchen%20stand%20mixer%20stainless%20steel%20modern%20appliance%20professional%20baking%20equipment%20product%20photography%20clean%20white%20background&width=400&height=300&seq=mixer001&orientation=landscape"
+alt="Kitchen Stand Mixer" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+</div>
+<div class="flex-1 p-6">
+<div class="flex items-start justify-between mb-3">
+<div class="flex items-center space-x-3">
+<span class="px-3 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full">Home Appliances</span>
+<div class="flex items-center space-x-1">
+<div class="flex text-yellow-400">
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-half-fill text-sm"></i>
+</div>
+<span class="text-gray-600 text-sm">(4.7)</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-2xl font-bold text-gray-900">$399</span>
+<span class="text-sm text-gray-500">5-quart model</span>
+</div>
+</div>
+<h3 class="text-xl font-playfair font-semibold text-gray-900 mb-3">KitchenAid Artisan Stand Mixer Review</h3>
+<p class="text-gray-600 text-sm leading-relaxed mb-4 max-w-3xl">The iconic KitchenAid Artisan mixer put to the test. We evaluate performance, durability, and value across months of intensive baking and cooking. Complete analysis of mixing capabilities, attachment compatibility, and motor strength.</p>
+<div class="flex space-x-3">
+<button class="bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 px-6 !rounded-button font-medium transition-colors whitespace-nowrap">
+View Full Review
+</button>
+<button class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-6 !rounded-button font-medium transition-colors whitespace-nowrap">
+Buy on Amazon
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Review Row 5 -->
+<article class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden group">
+<div class="flex">
+<div class="w-64 h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=smart%20home%20security%20system%20modern%20technology%20wireless%20cameras%20sensors%20home%20improvement%20product%20photography%20clean%20minimalist%20background&width=400&height=300&seq=security001&orientation=landscape"
+alt="Smart Security System" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+</div>
+<div class="flex-1 p-6">
+<div class="flex items-start justify-between mb-3">
+<div class="flex items-center space-x-3">
+<span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded-full">Home Improvement</span>
+<div class="flex items-center space-x-1">
+<div class="flex text-yellow-400">
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-line text-sm"></i>
+</div>
+<span class="text-gray-600 text-sm">(4.3)</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-2xl font-bold text-gray-900">$299</span>
+<span class="text-sm text-gray-500">8-piece kit</span>
+</div>
+</div>
+<h3 class="text-xl font-playfair font-semibold text-gray-900 mb-3">Ring Alarm Pro Security System Review</h3>
+<p class="text-gray-600 text-sm leading-relaxed mb-4 max-w-3xl">Complete analysis of Ring's professional-grade security system. Installation, app functionality, and real-world performance tested over 3 months. Detailed evaluation of motion detection, battery life, and integration capabilities.</p>
+<div class="flex space-x-3">
+<button class="bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 px-6 !rounded-button font-medium transition-colors whitespace-nowrap">
+View Full Review
+</button>
+<button class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-6 !rounded-button font-medium transition-colors whitespace-nowrap">
+Buy on Amazon
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Review Row 6 -->
+<article class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden group">
+<div class="flex">
+<div class="w-64 h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=modern%20abstract%20wall%20art%20canvas%20painting%20contemporary%20home%20decor%20minimalist%20design%20artistic%20decoration%20clean%20gallery%20background&width=400&height=300&seq=art001&orientation=landscape"
+alt="Modern Wall Art" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+</div>
+<div class="flex-1 p-6">
+<div class="flex items-start justify-between mb-3">
+<div class="flex items-center space-x-3">
+<span class="px-3 py-1 bg-pink-100 text-pink-800 text-xs font-medium rounded-full">Art & Decor</span>
+<div class="flex items-center space-x-1">
+<div class="flex text-yellow-400">
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+</div>
+<span class="text-gray-600 text-sm">(4.8)</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-2xl font-bold text-gray-900">$189</span>
+<span class="text-sm text-gray-500">24" x 36"</span>
+</div>
+</div>
+<h3 class="text-xl font-playfair font-semibold text-gray-900 mb-3">Saatchi Art Canvas Collection Review</h3>
+<p class="text-gray-600 text-sm leading-relaxed mb-4 max-w-3xl">Exploring Saatchi Art's curated canvas collection for modern homes. Quality, pricing, and artistic value assessed across multiple purchases. Complete evaluation of canvas material, print quality, and framing options.</p>
+<div class="flex space-x-3">
+<button class="bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 px-6 !rounded-button font-medium transition-colors whitespace-nowrap">
+View Full Review
+</button>
+<button class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-6 !rounded-button font-medium transition-colors whitespace-nowrap">
+Buy on Amazon
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Review Row 7 -->
+<article class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden group">
+<div class="flex">
+<div class="w-64 h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=modern%20pendant%20lighting%20fixture%20brass%20gold%20contemporary%20design%20dining%20room%20chandelier%20elegant%20home%20lighting%20product%20photography%20clean%20background&width=400&height=300&seq=light001&orientation=landscape"
+alt="Pendant Lighting" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+</div>
+<div class="flex-1 p-6">
+<div class="flex items-start justify-between mb-3">
+<div class="flex items-center space-x-3">
+<span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-xs font-medium rounded-full">Lighting</span>
+<div class="flex items-center space-x-1">
+<div class="flex text-yellow-400">
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-half-fill text-sm"></i>
+</div>
+<span class="text-gray-600 text-sm">(4.6)</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-2xl font-bold text-gray-900">$249</span>
+<span class="text-sm text-gray-500">Medium size</span>
+</div>
+</div>
+<h3 class="text-xl font-playfair font-semibold text-gray-900 mb-3">West Elm Sculptural Glass Pendant Review</h3>
+<p class="text-gray-600 text-sm leading-relaxed mb-4 max-w-3xl">An elegant lighting solution tested in real homes. We examine build quality, light output, and installation process of this popular pendant fixture. Comprehensive testing of bulb compatibility and dimming capabilities.</p>
+<div class="flex space-x-3">
+<button class="bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 px-6 !rounded-button font-medium transition-colors whitespace-nowrap">
+View Full Review
+</button>
+<button class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-6 !rounded-button font-medium transition-colors whitespace-nowrap">
+Buy on Amazon
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Review Row 8 -->
+<article class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden group">
+<div class="flex">
+<div class="w-64 h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=smart%20thermostat%20modern%20home%20automation%20device%20digital%20display%20energy%20efficient%20technology%20home%20improvement%20product%20photography%20clean%20white%20background&width=400&height=300&seq=thermo001&orientation=landscape"
+alt="Smart Thermostat" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+</div>
+<div class="flex-1 p-6">
+<div class="flex items-start justify-between mb-3">
+<div class="flex items-center space-x-3">
+<span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded-full">Home Improvement</span>
+<div class="flex items-center space-x-1">
+<div class="flex text-yellow-400">
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+</div>
+<span class="text-gray-600 text-sm">(4.9)</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-2xl font-bold text-gray-900">$249</span>
+<span class="text-sm text-gray-500">Installation included</span>
+</div>
+</div>
+<h3 class="text-xl font-playfair font-semibold text-gray-900 mb-3">Nest Learning Thermostat 4th Gen Review</h3>
+<p class="text-gray-600 text-sm leading-relaxed mb-4 max-w-3xl">Google's latest smart thermostat tested for energy savings and ease of use. Six months of data reveals impressive efficiency gains and user experience. Detailed analysis of learning algorithms and smart home integration.</p>
+<div class="flex space-x-3">
+<button class="bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 px-6 !rounded-button font-medium transition-colors whitespace-nowrap">
+View Full Review
+</button>
+<button class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-6 !rounded-button font-medium transition-colors whitespace-nowrap">
+Buy on Amazon
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Review Row 9 -->
+<article class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden group">
+<div class="flex">
+<div class="w-64 h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=luxury%20dining%20table%20solid%20wood%20modern%20design%20elegant%20furniture%20dining%20room%20contemporary%20home%20decor%20product%20photography%20clean%20minimalist%20background&width=400&height=300&seq=table001&orientation=landscape"
+alt="Dining Table" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+</div>
+<div class="flex-1 p-6">
+<div class="flex items-start justify-between mb-3">
+<div class="flex items-center space-x-3">
+<span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">Furniture Reviews</span>
+<div class="flex items-center space-x-1">
+<div class="flex text-yellow-400">
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-fill text-sm"></i>
+<i class="ri-star-line text-sm"></i>
+</div>
+<span class="text-gray-600 text-sm">(4.1)</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-2xl font-bold text-gray-900">$899</span>
+<span class="text-sm text-gray-500">72" length</span>
+</div>
+</div>
+<h3 class="text-xl font-playfair font-semibold text-gray-900 mb-3">Article Seno Walnut Dining Table Review</h3>
+<p class="text-gray-600 text-sm leading-relaxed mb-4 max-w-3xl">Article's popular walnut dining table examined for craftsmanship and value. Real-world durability testing and comparison with similar mid-century modern pieces. Complete assessment of finish quality and assembly process.</p>
+<div class="flex space-x-3">
+<button class="bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 px-6 !rounded-button font-medium transition-colors whitespace-nowrap">
+View Full Review
+</button>
+<button class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-6 !rounded-button font-medium transition-colors whitespace-nowrap">
+Buy on Amazon
+</button>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex justify-center items-center mt-12 space-x-2">
+<button class="px-3 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-arrow-left-s-line text-gray-600"></i>
+</div>
+</button>
+<button class="px-4 py-2 bg-primary text-white rounded-lg font-medium">1</button>
+<button class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">2</button>
+<button class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">3</button>
+<span class="px-2 text-gray-500">...</span>
+<button class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">12</button>
+<button class="px-3 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-arrow-right-s-line text-gray-600"></i>
+</div>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-2">
+<h3 class="text-2xl font-playfair font-bold mb-4">HomeReview</h3>
+<p class="text-gray-300 mb-6 max-w-md">Your trusted source for honest, detailed home product reviews. We test everything so you can shop with confidence.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors">
+<i class="ri-facebook-fill text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors">
+<i class="ri-twitter-fill text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors">
+<i class="ri-instagram-fill text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors">
+<i class="ri-youtube-fill text-white"></i>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-semibold text-lg mb-4">Categories</h4>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">Furniture Reviews</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">Bed & Mattress</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">Couch</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">Home Appliances</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">Home Improvement</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">Art & Decor</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">Lighting</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-semibold text-lg mb-4">Company</h4>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">Our Process</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">Careers</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">Press</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">Privacy Policy</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-8 pt-8">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm">© 2025 HomeReview. All rights reserved.</p>
+<div class="flex items-center space-x-6 mt-4 md:mt-0">
+<div class="flex items-center space-x-2">
+<i class="ri-visa-fill text-2xl text-gray-400"></i>
+<i class="ri-mastercard-fill text-2xl text-gray-400"></i>
+<i class="ri-paypal-fill text-2xl text-gray-400"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script id="filter-functionality">
+document.addEventListener("DOMContentLoaded", function () {
+  const filterButtons = document.querySelectorAll('[class*="border-gray-300"]');
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const dropdown = this.nextElementSibling;
+      if (dropdown && dropdown.classList.contains("dropdown-menu")) {
+        dropdown.classList.toggle("hidden");
+      }
+    });
+  });
+});
+</script>
+<script id="card-interactions">
+document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll("article");
+  cards.forEach((card) => {
+    card.addEventListener("mouseenter", function () {
+      this.style.transform = "translateY(-4px)";
+    });
+    card.addEventListener("mouseleave", function () {
+      this.style.transform = "translateY(0)";
+    });
+  });
+});
+</script>
+<script id="mobile-menu">
+document.addEventListener("DOMContentLoaded", function () {
+  const mobileMenuButton = document.querySelector('[class*="md:hidden"]');
+  const navigation = document.querySelector("nav");
+  if (mobileMenuButton) {
+    mobileMenuButton.addEventListener("click", function () {
+      navigation.classList.toggle("hidden");
+    });
+  }
+  const filterToggle = document.getElementById("filter-toggle");
+  const filtersSidebar = document.getElementById("filters-sidebar");
+  if (filterToggle && filtersSidebar) {
+    filterToggle.addEventListener("click", function () {
+      filtersSidebar.classList.toggle("hidden");
+    });
+  }
+});
+</script>
+</修改前>
+<修改后>
+<script id="mobile-menu">
+document.addEventListener("DOMContentLoaded", function () {
+  const mobileMenuButton = document.querySelector('[class*="md:hidden"]');
+  const navigation = document.querySelector("nav");
+  if (mobileMenuButton) {
+    mobileMenuButton.addEventListener("click", function () {
+      navigation.classList.toggle("hidden");
+    });
+  }
+  const filterToggle = document.getElementById("filter-toggle");
+  const filtersSidebar = document.getElementById("filters-sidebar");
+  if (filterToggle && filtersSidebar) {
+    filterToggle.addEventListener("click", function () {
+      filtersSidebar.classList.toggle("hidden");
+    });
+  }
+});
+</script>
+</body>
+</html>
